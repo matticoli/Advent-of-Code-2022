@@ -8,16 +8,9 @@ import (
 	"strings"
 )
 
-var scorematrix string = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var sacks []string
-
 func main() {
 	var sum, osum = countContained("./input.txt")
-	fmt.Printf("Contained: %d Overlap: %d\n", sum, osum)
-}
-
-func getPriority(item byte) int {
-	return strings.Index(scorematrix, string(item))
+	// fmt.Printf("Contained: %d Overlap: %d\n", sum, osum)
 }
 
 func isContained(e1 string, e2 string) bool {
@@ -41,7 +34,7 @@ func isContained(e1 string, e2 string) bool {
 func overlap(e1 string, e2 string) bool {
 	var r1 = getRange(e1)
 	var r2 = getRange(e2)
-	fmt.Printf("%s vs %s\n", e1, e2)
+	// fmt.Printf("%s vs %s\n", e1, e2)
 	if r1[0] >= r2[0] && r1[0] <= r2[1] {
 		// R1 contains r2
 		// fmt.Printf("r1 contains r2\n")
